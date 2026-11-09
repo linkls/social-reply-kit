@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>不冷场接话包 · 8 个场景 24 句接话模板</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:#F1EAE1}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:#33403D;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.app{max-width:430px;min-height:100vh;margin:0 auto;background:#FAF7F2;position:relative;overflow:hidden}
+.pad{padding:0 20px 50px}
+
+/* ---------- 通用 ---------- */
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9AA8A4;font-weight:600}
+.h1{font-size:29px;line-height:1.28;font-weight:800;letter-spacing:-.01em}
+.h2{font-size:18px;font-weight:800;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.h2::before{content:"";width:4px;height:16px;border-radius:3px;background:var(--teal)}
+.h3{font-size:15px;font-weight:800;margin:0 0 8px}
+.sub{color:#63736F;font-size:14px}
+.card{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07)}
+.tag{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#EAF3F0;color:#4E8C84}
+.tag.a{background:#FBEADC;color:#B46B3C}.tag.b{background:#E4F0ED;color:#4E8C84}
+.tag.c{background:#ECE9F7;color:#6E65A8}.tag.d{background:#E3ECF5;color:#4B7196}
+.rule{height:1px;background:#EFE8DF;margin:16px 0}
+.muted{color:#8C9A96;font-size:12.5px;line-height:1.75}
+.lead{color:#63736F;font-size:14.5px}
+
+/* ---------- 首页 ---------- */
+.hero{position:relative;padding:42px 0 6px;text-align:center}
+.blob{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:200px;height:200px;
+  background:radial-gradient(circle at 35% 30%,#FBE3CE,#F6D5C2 45%,#DCEBE6 100%);
+  filter:blur(7px);opacity:.7;z-index:0;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .h1{margin:12px 0 8px}
+.hero .lead{color:#63736F;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 2px}
+.chip{background:#fff;border:1px solid #EEE5DA;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#5C6B67;font-weight:600}
+.tipbar{display:flex;gap:9px;align-items:flex-start;background:#EAF4F1;border-radius:16px;padding:13px 14px;margin:20px 0 0}
+.tipbar .ic{flex:0 0 26px;width:26px;height:26px;border-radius:9px;background:#71B0A4;color:#fff;font-size:14px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.tipbar .tx{flex:1;font-size:13px;color:#4B5C58;line-height:1.7}
+
+/* ---------- 速查表 ---------- */
+.quick{background:#fff;border-radius:22px;padding:16px 12px 12px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:16px}
+.qt{width:100%;border-collapse:collapse;table-layout:fixed}
+.qt th,.qt td{border-bottom:1px dashed #EFE8DF;padding:9px 6px;vertical-align:top;text-align:left;font-size:11.5px;line-height:1.55}
+.qt th{font-size:11.5px;color:#8C9A96;font-weight:800;letter-spacing:.02em;padding-bottom:8px}
+.qt td:first-child,.qt th:first-child{width:64px;padding-left:4px}
+.qt tr:last-child td{border-bottom:0}
+.qt .sc{font-weight:800;color:#33403D;font-size:12px}
+.qt .g{color:#54635F}
+.qt .v1{color:#3F6F68;font-weight:700}
+.qt .v2{color:#8A6238;font-weight:700}
+.qt .v3{color:#5E5790;font-weight:700}
+.qtcap{display:flex;align-items:center;justify-content:space-between;margin:0 4px 6px}
+.qtcap .t{font-size:15px;font-weight:800}
+.qtcap .b{font-size:11px;color:#A5AFA9}
+
+/* ---------- 场景 ---------- */
+.sc-head{display:flex;align-items:flex-start;gap:12px;margin:30px 0 12px}
+.sc-no{flex:0 0 38px;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#71B0A4,#4E8C84);color:#fff;
+  font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.sc-head .tt{flex:1}
+.sc-head .tt .n{font-size:19px;font-weight:800;line-height:1.35}
+.sc-head .tt .d{font-size:13px;color:#8C9A96;margin-top:3px}
+.ver{background:#fff;border-radius:20px;padding:17px 16px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-bottom:12px}
+.vhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.vhead .nm{font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px}
+.vhead .dot{width:9px;height:9px;border-radius:50%}
+.copyall{border:1px solid #E9E1D6;background:#fff;border-radius:999px;padding:5px 12px;font-size:11.5px;color:#8C9A96;font-weight:700;cursor:pointer;font-family:inherit}
+.copyall:active{background:#F5F1EA}
+.line{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;background:#FAF7F2;border:1px solid #EFE7DC;border-radius:14px;
+  margin-bottom:9px;cursor:pointer;transition:all .15s ease}
+.line:active{transform:scale(.99);border-color:#71B0A4;background:#EAF4F1}
+.line .tx{flex:1;font-size:14.5px;line-height:1.66;color:#3E4B48}
+.line .cp{flex:0 0 20px;width:20px;height:20px;border-radius:7px;background:#EAF3F0;color:#4E8C84;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.meta{margin-top:12px;border-radius:14px;padding:12px 13px;background:#F7F3EC}
+.meta .r{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:13px;line-height:1.7;color:#54635F}
+.meta .r .k{flex:0 0 74px;font-size:11.5px;font-weight:800;color:#9AA8A4;letter-spacing:.02em;padding-top:2px}
+.meta .r .v{flex:1}
+.meta .r .v em{font-style:normal;color:#33403D;font-weight:700}
+
+/* ---------- 自测 ---------- */
+.qwrap{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 8px 26px rgba(74,90,84,.08)}
+.qbar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin-bottom:16px}
+.qbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178);transition:width .3s ease}
+.qcnt{font-size:12.5px;color:#8C9A96;font-weight:700;margin-bottom:9px}
+.qcnt b{color:#4E8C84;font-size:15px}
+.qtext{font-size:18px;font-weight:700;line-height:1.55;margin-bottom:16px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;background:#FAF7F2;border:1.5px solid #EFE7DC;
+  border-radius:16px;padding:13px 14px;font-size:14.5px;line-height:1.6;color:#3E4B48;cursor:pointer;font-family:inherit;transition:all .15s ease}
+.opt:active{transform:scale(.99)}
+.opt .k{flex:0 0 23px;width:23px;height:23px;border-radius:8px;background:#EDE5DA;color:#8C9A96;font-size:12.5px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:2px}
+.opt.sel{border-color:#71B0A4;background:#EAF4F1}
+.opt.sel .k{background:#71B0A4;color:#fff}
+.backbtn{border:0;background:transparent;color:#8C9A96;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;padding:2px 0;margin-top:14px}
+.res-hero{border-radius:22px;padding:24px 20px;position:relative;overflow:hidden}
+.res-hero .kicker{font-size:12px;letter-spacing:.16em;font-weight:700;opacity:.78}
+.res-hero .tname{font-size:27px;font-weight:900;margin:8px 0 4px}
+.res-hero .oneline{font-size:14.5px;line-height:1.75;margin-top:12px}
+.res-list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.res-item{background:#fff;border-radius:16px;padding:13px 14px;display:flex;gap:11px;align-items:flex-start;box-shadow:0 4px 16px rgba(74,90,84,.06)}
+.res-item .ic{flex:0 0 26px;width:26px;height:26px;border-radius:9px;color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.res-item .tx{flex:1;font-size:14px;line-height:1.72;color:#4B5C58}
+.res-item .tx b{display:block;color:#33403D;font-size:14.5px;margin-bottom:3px}
+.rbtn{display:block;width:100%;padding:15px;border:0;border-radius:17px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:11px}
+.rbtn.p{background:linear-gradient(135deg,#71B0A4,#4E8C84);color:#fff;box-shadow:0 8px 20px rgba(78,140,132,.24)}
+.rbtn.s{background:#fff;border:1px solid #E9E1D6;color:#6B7A76}
+
+.foot{text-align:center;color:#B0B8B4;font-size:11.5px;line-height:1.85;margin-top:26px}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);
+  color:#fff;padding:11px 20px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:all .28s ease;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(min-width:431px){.app{box-shadow:0 0 60px rgba(80,90,84,.10)}}
+
+/* ---------- 产品4 追加 ---------- */
+.sectnav{display:flex;gap:8px;margin:18px 0 0}
+.sectnav button{flex:1;border:1px solid #E9E1D6;background:#fff;border-radius:14px;padding:11px 8px;font-size:13px;font-weight:700;color:#5C6B67;cursor:pointer;font-family:inherit}
+.sectnav button:active{background:#F5F1EA}
+.disc{background:#F7F3EC;border-radius:16px;padding:13px 14px;margin-top:18px;font-size:12.5px;line-height:1.8;color:#7C8A86}
+.disc b{color:#54635F}
+.bars{background:#fff;border-radius:20px;padding:16px 16px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.bars .bt{font-size:13px;font-weight:800;color:#33403D;margin-bottom:14px}
+.barrow{margin-bottom:12px}
+.barrow .bl{display:flex;justify-content:space-between;font-size:12.5px;color:#54635F;font-weight:700;margin-bottom:6px}
+.barrow .bl span:last-child{color:#4E8C84;font-weight:800}
+.bar{height:9px;border-radius:99px;background:#EBE3D9;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scorebar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin:14px 0 6px}
+.scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178)}
+.scoretxt{font-size:12px;color:#8C9A96;font-weight:700}
+.demo{margin-top:14px}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <section class="pad" id="s-home">
+    <div class="hero">
+      <div class="blob"></div>
+      <div class="eyebrow">REPLY KIT</div>
+      <h1 class="h1">不冷场接话包</h1>
+      <p class="lead">8 个高频场合，24 句接得住的话<br>被 @、被甩活、被否定、冷场、催进度都能接上</p>
+      <div class="chips">
+        <span class="chip">8 个场景</span>
+        <span class="chip">24 句可复制</span>
+        <span class="chip">1 张速查表</span>
+        <span class="chip">附 4 题反射小测</span>
+      </div>
+    </div>
+
+    <div class="tipbar">
+      <div class="ic">i</div>
+      <div class="tx">点任意一句就能复制，粘到聊天框里改两个字就能用。顶上的速查表适合临场扫一眼。</div>
+    </div>
+
+    <div class="quick">
+      <div class="qtcap"><div class="t">30 秒速查表</div><div class="b">来不及看全文时看这张</div></div>
+      <table class="qt">
+        <thead><tr><th>场景</th><th>先接住</th><th>再补这句</th><th>收尾这句</th></tr></thead>
+        <tbody>
+<tr><td class="sc">被 @</td><td class="g v1">在的，你说</td><td class="g v2">我今天下午细看</td><td class="g v3">晚上回你完整的</td></tr>
+<tr><td class="sc">被甩活</td><td class="g v1">能看，先说范围</td><td class="g v2">这周要就挪一件</td><td class="g v3">半小时内给你准信</td></tr>
+<tr><td class="sc">被否定</td><td class="g v1">行，按你这版</td><td class="g v2">你更在意速度还是成本</td><td class="g v3">原版我留着备查</td></tr>
+<tr><td class="sc">闲聊冷场</td><td class="g v1">你昨天那杯在哪买的</td><td class="g v2">你当初怎么想到换方向</td><td class="g v3">你中午一般吃啥</td></tr>
+<tr><td class="sc">被催进度</td><td class="g v1">到联调这一步</td><td class="g v2">先出简版还是完整版</td><td class="g v3">今天下班前一版</td></tr>
+<tr><td class="sc">临时加活</td><td class="g v1">明天白天做</td><td class="g v2">今晚要得再找人</td><td class="g v3">明天几点前给你</td></tr>
+<tr><td class="sc">亲戚问工资</td><td class="g v1">够花，不富裕</td><td class="g v2">具体的就不说了</td><td class="g v3">走，先吃饭</td></tr>
+<tr><td class="sc">朋友借钱</td><td class="g v1">手头是真紧</td><td class="g v2">大额不行，小额可以</td><td class="g v3">金额和日期定一下</td></tr>
+        </tbody>
+      </table>
+      <div class="rule"></div>
+      <div class="muted">用法：先认场景，再挑一句更贴近的改两个字。同一场景三句的力度不同，按你和对方的关系远近选。</div>
+    </div>
+
+    <div class="sectnav">
+      <button onclick="goSection('s-scenes')">看 24 句话</button>
+      <button onclick="showTest()">做反射小测</button>
+    </div>
+
+    <div class="disc"><b>使用说明</b><br>本内容为自我观察与沟通参考工具，不构成专业心理评估、诊断或医疗建议。话术是参考句不是标准答案，请按你面对的人调整。</div>
+  </section>
+
+  <section class="pad" id="s-scenes">
+    <div class="sc-head">
+      <div class="sc-no">8</div>
+      <div class="tt"><div class="n">接话模板</div><div class="d">每个场景三句，按顺序是：先接住 → 再给信息 → 留个钩子。</div></div>
+    </div>
+<div class="sc-head" id="sc1">
+<div class="sc-no">1</div>
+<div class="tt"><div class="n">被 @</div><div class="d">群里聊到一半，有人直接点你的名，等你一个回应。</div></div>
+</div>
+<div class="ver" id="v1">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v1">复制整段</button></div>
+<div class="line" data-copy="在的，刚在处理手上的事，你说，我接着听。"><div class="tx">在的，刚在处理手上的事，你说，我接着听。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="这个我今天下午才有空细看，先给你个大概：现在到哪一步了。"><div class="tx">这个我今天下午才有空细看，先给你个大概：现在到哪一步了。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="看到了，我晚上回你完整的，现在先占个位，别让你等。"><div class="tx">看到了，我晚上回你完整的，现在先占个位，别让你等。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">群里 @ 你但话题还在展开；或者人多、你不想先长篇发言。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「那你先忙」「具体到哪一步了？」——多半是想要一个进度，不是真的在催你。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">对方追问就落到具体一句：卡在哪、什么时候给，别再重复「在看了」。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc2">
+<div class="sc-no">2</div>
+<div class="tt"><div class="n">被甩活</div><div class="d">对方把自己的活推过来，语气轻松，好像本来就该你做。</div></div>
+</div>
+<div class="ver" id="v2">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v2">复制整段</button></div>
+<div class="line" data-copy="这个我可以看。先说清楚：你是要一个结果，还是要我帮你看思路？"><div class="tx">这个我可以看。先说清楚：你是要一个结果，还是要我帮你看思路？</div><div class="cp">拷</div></div>
+<div class="line" data-copy="我这周排得挺满，如果这周要，得把手上那件往后挪两天，你定。"><div class="tx">我这周排得挺满，如果这周要，得把手上那件往后挪两天，你定。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="给我半小时，我评估完再回你，免得答应了做不出来。"><div class="tx">给我半小时，我评估完再回你，免得答应了做不出来。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">活落到你头上，但交付范围还没说清；或者你这周确实有更硬的时间点。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「那你说个数？」「大家都这么干。」——对方在试探边界，也可能真以为你会接。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">把范围、时间、交付人三件事说死一句：这件事我做到哪、什么时候交。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc3">
+<div class="sc-no">3</div>
+<div class="tt"><div class="n">被否定</div><div class="d">你的方案刚提出来，对方一句话给否了。</div></div>
+</div>
+<div class="ver" id="v3">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v3">复制整段</button></div>
+<div class="line" data-copy="行，我先按你说的这版做。你有改动随时标我一下。"><div class="tx">行，我先按你说的这版做。你有改动随时标我一下。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="我想先确认一下：你更在意速度，还是成本？这两个改法差别挺大。"><div class="tx">我想先确认一下：你更在意速度，还是成本？这两个改法差别挺大。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="明白了，这版我照着改。原来那版我留着，需要对比的时候能用。"><div class="tx">明白了，这版我照着改。原来那版我留着，需要对比的时候能用。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">对方有权拍板且时间紧；或者你确实拿不出更硬的依据。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「行吧」「那按老方案」——有时否定只是习惯，不一定是判断。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">先问清他在意什么；问不出就执行，但把原方案留一份，别让过程消失。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc4">
+<div class="sc-no">4</div>
+<div class="tt"><div class="n">闲聊冷场</div><div class="d">两个人都没事干，话头掉在地上。</div></div>
+</div>
+<div class="ver" id="v4">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v4">复制整段</button></div>
+<div class="line" data-copy="你昨天那杯在哪买的？我早上找了半天没找到。"><div class="tx">你昨天那杯在哪买的？我早上找了半天没找到。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="有件小事一直想问：你当初怎么想到换现在这个方向的？"><div class="tx">有件小事一直想问：你当初怎么想到换现在这个方向的？</div><div class="cp">拷</div></div>
+<div class="line" data-copy="这天儿我实在不想动。你中午一般吃啥，我参考一下。"><div class="tx">这天儿我实在不想动。你中午一般吃啥，我参考一下。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">工位、茶歇、饭前那几分钟；对方明显想聊但没找到话头。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「哈哈我随便点的」「说来话长」——冷场通常不是没话说，是没人先开口。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">接住对方抛回来的东西，多问一句细节，让话题自己长。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc5">
+<div class="sc-no">5</div>
+<div class="tt"><div class="n">被催进度</div><div class="d">对方隔一会儿就问一句「做得怎么样了」。</div></div>
+</div>
+<div class="ver" id="v5">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v5">复制整段</button></div>
+<div class="line" data-copy="现在到联调这一步，卡在数据对不上，今天下班前给你一版。"><div class="tx">现在到联调这一步，卡在数据对不上，今天下班前给你一版。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="想跟你对一下优先级：是先出完整版，还是先出一个能用的简版？"><div class="tx">想跟你对一下优先级：是先出完整版，还是先出一个能用的简版？</div><div class="cp">拷</div></div>
+<div class="line" data-copy="速度我提不了，但可以先给你一个能用的版本，剩下的我接着补。"><div class="tx">速度我提不了，但可以先给你一个能用的版本，剩下的我接着补。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">你确实在推进，但进度对方看不见；或者你手上同时有两件被催的事。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「行吧」「那什么时候能好？」——追问通常是缺信息，不是缺诚意。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">每次回复都带一个可核对的东西：阶段、卡点、时间，三样里给两样。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc6">
+<div class="sc-no">6</div>
+<div class="tt"><div class="n">被临时加活</div><div class="d">下班点、周末、假期里，突然多出来一件事。</div></div>
+</div>
+<div class="ver" id="v6">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v6">复制整段</button></div>
+<div class="line" data-copy="这个我明天白天做，今晚我在处理家里的事。"><div class="tx">这个我明天白天做，今晚我在处理家里的事。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="要今晚给的话得再找一个人，我看看谁手上有空。"><div class="tx">要今晚给的话得再找一个人，我看看谁手上有空。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="两件我今晚只能挑一件，你更急的是哪个？"><div class="tx">两件我今晚只能挑一件，你更急的是哪个？</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候使用</div><div class="v">临时插进来的活儿优先级不明，而你自己已经有安排。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「不复杂，两分钟的事」「那明天呢？」——把事说小的人，往往给的不止两分钟。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">把时间说具体到「明天几点前」，别只说「明天」；把取舍权交回给对方。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc7">
+<div class="sc-no">7</div>
+<div class="tt"><div class="n">亲戚问工资</div><div class="d">聚会上被问起收入，对方是真的好奇，不是恶意。</div></div>
+</div>
+<div class="ver" id="v7">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v7">复制整段</button></div>
+<div class="line" data-copy="够花，不富裕。具体的就不说了，我这边还在攒钱。"><div class="tx">够花，不富裕。具体的就不说了，我这边还在攒钱。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="跟你那边比应该差不少，我们这行图的是个稳当。"><div class="tx">跟你那边比应该差不少，我们这行图的是个稳当。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="哎哟别问了，走，先吃饭去，改天再聊。"><div class="tx">哎哟别问了，走，先吃饭去，改天再聊。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">饭桌、亲戚聚会、熟人闲聊；对方打听到的程度已经越线。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「这么少啊」「在哪个公司呀，做什么啊？」——话题会顺着往下钻。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">换话题比解释有效：说个在场的人、说件马上要做的事，把话头带走。</div></div>
+</div>
+</div>
+<div class="sc-head" id="sc8">
+<div class="sc-no">8</div>
+<div class="tt"><div class="n">朋友借钱</div><div class="d">关系是真的，事也是真的，只是数目和时点对不上。</div></div>
+</div>
+<div class="ver" id="v8">
+<div class="vhead"><div class="nm"><span class="dot"></span>接话三句</div><button class="copyall" data-group="v8">复制整段</button></div>
+<div class="line" data-copy="我这边刚交完房租，手头是真紧。你再想想别的办法。"><div class="tx">我这边刚交完房租，手头是真紧。你再想想别的办法。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="大额我给不了，小额可以。你就按小额来算。"><div class="tx">大额我给不了，小额可以。你就按小额来算。</div><div class="cp">拷</div></div>
+<div class="line" data-copy="咱俩这关系我不跟你绕：这次我拿不出来，换别的我一定帮。"><div class="tx">咱俩这关系我不跟你绕：这次我拿不出来，换别的我一定帮。</div><div class="cp">拷</div></div>
+<div class="meta">
+<div class="r"><div class="k">什么时候用</div><div class="v">金额超出手头承受范围；或者对方开口时没给归还的时间。</div></div>
+<div class="r"><div class="k">对方可能的反应</div><div class="v">「就这一次」「下周就还你」——先谈感情还是先谈数字，决定后面的难易。</div></div>
+<div class="r"><div class="k">怎么接下一句</div><div class="v">如果要借，把三件事定下来：金额、日期、方式；写下来比记在心里管用。</div></div>
+</div>
+</div>
+    <div class="disc"><b>使用说明</b><br>本内容为自我观察与沟通参考工具，不构成专业心理评估、诊断或医疗建议。</div>
+  </section>
+
+  <section class="pad" id="s-test">
+    <div class="sc-head">
+      <div class="sc-no">测</div>
+      <div class="tt"><div class="n">接话反射速度</div><div class="d">4 道题，看你是接得住、接得稳，还是容易卡壳。</div></div>
+    </div>
+    <div class="qwrap" id="qwrap"></div>
+    <div class="disc"><b>使用说明</b><br>本内容为自我观察与沟通参考工具，不构成专业心理评估、诊断或医疗建议。结果只反映你这次的选择。</div>
+  </section>
+
+  <div class="foot">
+    不冷场接话包 · 8 个场景 24 句可复制接话<br>
+    单文件网页，手机打开即用，断网也能看
+  </div>
+
+</div>
+<div class="toast" id="toast"></div>
+<script>
+var QZ = __QUIZ__;
+var RES = __RESULT__;
+var DIMS = [["speed","反应快慢"],["width","接话宽窄"],["calm","接话稳度"]];
+var qi = 0, picks = [];
+
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('on');},1500);}
+function copyText(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('已复制，去聊天框里粘上');},function(){fallback(txt);});
+  } else { fallback(txt); }
+}
+function fallback(txt){
+  var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('已复制，去聊天框里粘上');}catch(e){toast('长按选中这段文字也可以复制');}
+  document.body.removeChild(ta);
+}
+document.addEventListener('click',function(e){
+  var line=e.target.closest('[data-copy]');
+  if(line){copyText(line.getAttribute('data-copy'));return;}
+  var grp=e.target.closest('[data-group]');
+  if(grp){
+    var id=grp.getAttribute('data-group');
+    var box=document.getElementById(id);
+    var lines=box?box.querySelectorAll('[data-copy]'):[];
+    var arr=[];for(var i=0;i<lines.length;i++){arr.push(lines[i].getAttribute('data-copy'));}
+    copyText(arr.join('\n'));return;
+  }
+  var opt=e.target.closest('.opt');
+  if(opt){pick(parseInt(opt.getAttribute('data-i'),10));return;}
+});
+
+function goSection(id){
+  var el=document.getElementById(id);
+  if(el){window.scrollTo(0,el.offsetTop-8);}
+}
+function showTest(){qi=0;picks=[];renderQ();goSection('s-test');}
+function renderQ(){
+  var wrap=document.getElementById('qwrap');
+  if(qi>=QZ.length){renderResult();return;}
+  var q=QZ[qi];
+  var h='<div class="qcnt">第 <b>'+(qi+1)+'</b> / '+QZ.length+' 题</div>';
+  h+='<div class="qbar"><i style="width:'+Math.round((qi+1)/QZ.length*100)+'%"></i></div>';
+  h+='<div class="qtext">'+q[0]+'</div><div class="opts">';
+  for(var i=0;i<q[1].length;i++){
+    h+='<button class="opt" data-i="'+i+'"><span class="k">'+'ABC'[i]+'</span><span>'+q[1][i][0]+'</span></button>';
+  }
+  h+='</div><button class="backbtn" onclick="goSection(\'s-scenes\')">先返回上面看看话术</button>';
+  wrap.innerHTML=h;
+}
+function pick(i){
+  var q=QZ[qi];
+  if(!q) return;
+  picks.push(q[1][i][1]);
+  qi++;
+  renderQ();
+}
+function renderResult(){
+  var sp=0,w=0,c=0;
+  for(var i=0;i<picks.length;i++){sp+=picks[i][0];w+=picks[i][1];c+=picks[i][2];}
+  var total=sp+w+c;
+  var band=RES[2];
+  for(var j=0;j<RES.length;j++){ if(total<=RES[j][2]) { band=RES[j]; break; } }
+  var mx=QZ.length*2;
+  var h='<div class="res-hero" style="background:linear-gradient(135deg,'+band[5]+'22,'+band[5]+'0A)">';
+  h+='<div class="kicker" style="color:'+band[5]+'">接话反射速度 · 测试结果</div>';
+  h+='<div class="tname" style="color:'+band[5]+'">'+band[0]+'</div>';
+  h+='<div class="oneline" style="color:#4B5C58">'+band[1]+'</div>';
+  h+='</div>';
+  h+='<div class="bars"><div class="bt">三项得分（每项满分 '+mx+'）</div>';
+  var vals=[sp,w,c];
+  for(var k=0;k<DIMS.length;k++){
+    var pct=Math.round(vals[k]/mx*100);
+    h+='<div class="barrow"><div class="bl"><span>'+DIMS[k][1]+'</span><span>'+vals[k]+' / '+mx+'</span></div>';
+    h+='<div class="bar"><i style="width:'+pct+'%"></i></div></div>';
+  }
+  h+='<div class="scoretxt">总分 '+total+' / '+(mx*3)+' 分</div>';
+  h+='<div class="scorebar"><i style="width:'+Math.round(total/(mx*3)*100)+'%"></i></div>';
+  h+='</div>';
+  h+='<div class="res-list">';
+  for(var t=0;t<band[3][0].length;t++){
+    h+='<div class="res-item"><div class="ic" style="background:'+band[5]+'">'+(t+1)+'</div><div class="tx"><b>'+band[3][0][t][0]+'</b>'+band[3][0][t][1]+'</div></div>';
+  }
+  h+='</div>';
+  h+='<div class="disc"><b>今天能完成的小练习</b><br>'+band[4]+'</div>';
+  h+='<button class="rbtn p" onclick="showTest()">再测一次</button>';
+  h+='<button class="rbtn s" onclick="goSection(\'s-home\')">回到首页</button>';
+  document.getElementById('qwrap').innerHTML=h;
+}
+</script>
+</body>
+</html>
